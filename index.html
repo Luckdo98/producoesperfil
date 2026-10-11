@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chocolate Quente Produções LTDA | São Paulo/SP</title>
+  <title>CNPJ: 63.451.351/0001-39 | Chocolate Quente Produções LTDA</title>
 
   <!-- Swiper CSS para o Slider -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -20,7 +20,7 @@
 
     :root {
       --primary-color: #4a2810; /* Marrom Cacau Mídia / Produções */
-      --secondary-color: #d97706; /* Ambar Cinematográfico */
+      --secondary-color: #d97706; /* Âmbar Cinematográfico */
       --accent-color: #2b1507;
       --text-color: #1f2937;
       --bg-light: #fdfbf7;
@@ -31,6 +31,22 @@
       background-color: var(--bg-light);
       color: var(--text-color);
       line-height: 1.6;
+    }
+
+    /* Barra Superior com CNPJ */
+    .top-bar {
+      background-color: var(--accent-color);
+      color: var(--white);
+      text-align: center;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .top-bar i {
+      color: var(--secondary-color);
+      margin-right: 6px;
     }
 
     /* Cabeçalho / Navbar */
@@ -47,6 +63,11 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+    }
+
     .logo {
       font-size: 1.3rem;
       font-weight: 800;
@@ -58,6 +79,12 @@
 
     .logo i {
       color: var(--secondary-color);
+    }
+
+    .cnpj-sub {
+      font-size: 0.8rem;
+      color: #6b7280;
+      font-weight: 600;
     }
 
     nav a {
@@ -107,10 +134,22 @@
 
     .slide-content h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.4rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
+    }
+
+    .slide-cnpj {
+      display: inline-block;
+      background: rgba(217, 119, 6, 0.25);
+      border: 1px solid var(--secondary-color);
+      color: #fde68a;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
 
     .slide-content p {
@@ -186,6 +225,11 @@
       color: var(--primary-color);
     }
 
+    .info-card-highlight {
+      border-left-color: var(--secondary-color);
+      background: #fffbeb;
+    }
+
     .badge {
       display: inline-block;
       background-color: #dcfce7;
@@ -237,10 +281,18 @@
 </head>
 <body>
 
+  <!-- Barra Superior de Identificação com CNPJ -->
+  <div class="top-bar">
+    <i class="fa-solid fa-id-card"></i> CNPJ: 63.451.351/0001-39 | Cadastrado e Ativo
+  </div>
+
   <!-- Menu Cabeçalho -->
   <header>
-    <div class="logo">
-      <i class="fa-solid fa-clapperboard"></i> Chocolate Quente Produções
+    <div class="logo-container">
+      <div class="logo">
+        <i class="fa-solid fa-clapperboard"></i> Chocolate Quente Produções
+      </div>
+      <span class="cnpj-sub">CNPJ: 63.451.351/0001-39</span>
     </div>
     <nav>
       <a href="#inicio">Início</a>
@@ -259,7 +311,8 @@
           <div class="slide-overlay"></div>
           <div class="slide-content">
             <h1>Chocolate Quente Produções</h1>
-            <p>Criatividade, Produção e Conteúdo de Qualidade</p>
+            <div class="slide-cnpj"><i class="fa-solid fa-id-badge"></i> CNPJ 63.451.351/0001-39</div>
+            <p>Criatividade, Produção e Conteúdo Audiovisual em São Paulo</p>
             <a href="#contato" class="btn">Entre em Contato</a>
           </div>
         </div>
@@ -269,4 +322,128 @@
           <div class="slide-overlay"></div>
           <div class="slide-content">
             <h1>Ipiranga — São Paulo / SP</h1>
-            <p>Rua Dona Leopoldina, 286
+            <div class="slide-cnpj"><i class="fa-solid fa-location-dot"></i> Rua Dona Leopoldina, 286</div>
+            <p>Bloco 2 Studio R720 — CEP 04278-040</p>
+            <a href="#registro" class="btn">Dados Cadastrais</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-button-next" style="color: #fde68a;"></div>
+      <div class="swiper-button-prev" style="color: #fde68a;"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Informações Cadastrais -->
+  <section id="registro" class="container">
+    <h2 class="section-title">Informações Cadastrais</h2>
+    
+    <div class="info-grid">
+      <div class="info-card info-card-highlight">
+        <h3>CNPJ</h3>
+        <p style="font-size: 1.2rem;">63.451.351/0001-39</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Razão Social</h3>
+        <p>Chocolate Quente Producoes LTDA</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Situação Cadastral</h3>
+        <p><span class="badge">Ativa</span> (Desde 31/10/2025)</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Porte</h3>
+        <p>Micro Empresa (ME)</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Regime Tributário</h3>
+        <p>Simples Nacional (Desde 31/10/2025)</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Natureza Jurídica / Tipo</h3>
+        <p>Sociedade Empresária Limitada (Matriz)</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Capital Social</h3>
+        <p>R$ 10.000,00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização e Contato -->
+  <section id="contato" class="container">
+    <h2 class="section-title">Localização & Contato</h2>
+
+    <div class="contact-container">
+      <div>
+        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Canais de Atendimento</h3>
+        
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <strong>E-mail:</strong><br>
+            me****@****.com.br
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <strong>Telefone:</strong><br>
+            (41) 997****-****
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Endereço da Unidade</h3>
+        
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            Chocolate Quente Producoes LTDA<br>
+            <strong>CNPJ:</strong> 63.451.351/0001-39<br>
+            Rua Dona Leopoldina, 286<br>
+            <strong>Complemento:</strong> Bloco 2 Studio R720<br>
+            <strong>Bairro:</strong> Ipiranga<br>
+            São Paulo - SP | <strong>CEP:</strong> 04278-040
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2026 Chocolate Quente Producoes LTDA | CNPJ: 63.451.351/0001-39. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts do Slider Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+</html>
